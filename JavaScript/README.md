@@ -1,4 +1,32 @@
 # JavaScript
+- [Private class features](#private-class-features)
+- [call, apply, bind](#call-apply-bind)
+
+<br>
+
+## [Private class features](./private-class-features.js)
+```js
+class User {
+  name;
+  age;
+  #idNumber;
+
+  constructor(name, age, idNumber) {
+    this.name = name;
+    this.age = age;
+    this.#idNumber = idNumber;
+  }
+}
+
+const user1 = new User('정경진', 27, '961004-XXXXXXX');
+
+console.log(user1.age);
+console.log(user1.name);
+console.log(user1.#idNumber); // Error
+```
+
+<br>
+
 ## [call, apply, bind](./call-apply-bind.js)
 ### call
 call 메서드는 모든 함수에서 사용할 수 있으며, this를 특정 값으로 지정할 수 있다.
